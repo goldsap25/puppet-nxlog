@@ -39,6 +39,7 @@ class nxlog (
                 ensure  => $package_ensure,
                 source  => $local_package_msi,
                 require => File["${local_package_msi}"],
+              creates => "${install_dir}",
             }
 
             file { "${config_dir}${config_file}":
