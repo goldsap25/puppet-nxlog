@@ -1,4 +1,4 @@
-## This configuration file instantiates nxLog options and points to a 
+## This configuration file instantiates nxLog options and points to a
 ## directory with additional config files (optionally)
 
 
@@ -10,6 +10,6 @@ SpoolDir <%=@nxlog_spooldir%>
 LogFile <%=@nxlog_logfile%>
 
 <% if @include_external_configs == true %>
-# Include all configuration files in the specified locations
-include <%=@external_config_path%>
+  # Include all configuration files in the specified locations
+  include <%=@external_config_path%>
 <% end %>
