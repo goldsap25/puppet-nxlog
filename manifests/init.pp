@@ -62,8 +62,8 @@ class nxlog (
       }
       if $package_src_http == undef {
         file { "${local_package_msi}" :
-          ensure => 'file',
-          source => "${package_src}",
+          ensure  => 'file',
+          source  => "${package_src}",
           replace => false,
           require => File[$src_dir],
         }
@@ -74,8 +74,8 @@ class nxlog (
         }
         ->
         file { "${local_package_msi}":
-          ensure => 'file',
-          source => "${staging::path}/nxlog/${package_name}-${package_version}.msi",
+          ensure  => 'file',
+          source  => "${staging::path}/nxlog/${package_name}-${package_version}.msi",
           replace => false,
           require => File[$src_dir],
         }
